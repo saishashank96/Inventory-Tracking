@@ -21,7 +21,7 @@ You could also install packages by using the Replit packager interface in the le
 
 If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support).
 
-##Functionality covered:
+## Functionality covered:
 
 1. Create inventory items
 2. Edit Them
