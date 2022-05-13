@@ -1,0 +1,31 @@
+</head>
+    <body>
+    <div class="login-box">
+        <h1>Inventory</h1>
+            <form method="POST" action="{% url 'main' %}">    
+            {% csrf_token %}
+            <p>Name</p>
+            <input type="text" name="Name" placeholder="Enter Name" required="">
+            <p>Quantity</p>
+            <input type="text" name="Quantity" placeholder="Enter Quantity" required="">
+
+
+        
+           <br>
+            <input type="submit" name="submit">
+               <div class="form-group">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+
+                    <div class="alert alert-success" style="color:red;"> {{ message }}</div>
+
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <br>
+            </form>
+        </div>    
+    </body>
+</html>
