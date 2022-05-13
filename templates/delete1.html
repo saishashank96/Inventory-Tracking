@@ -1,6 +1,7 @@
-<a  href="{% url 'main' %}">HOME</a>
 </head>
     <body>
+      <h2>Item does not exist please check existing items in view</h2>
+      <a  href="{% url 'view' %}">View Inventory</a>
     <div class="login-box">
         <h1>Delete Inventory</h1>
             <form method="GET" action="{% url 'delete' %}">    

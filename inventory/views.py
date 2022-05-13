@@ -29,18 +29,23 @@ def insert(request):
   return HttpResponse('Done')
 def view(request):
   objs=Inventory.objects.all()
-  return render(request,'display.html',{'obj':objs})
+  objs1=deleted.objects.all()
+  return render(request,'display.html',{'obj':objs,'obj1':objs1})
 def deletev(request):
   return render(request,'delete.html')
 def delete(request):
   Name=request.GET['Name']
-  p=Inventory.objects.get(Name=Name) 
-  check=deleted(Name=p.Name,Quantity=p.Quantity,Comment=request.GET['Comment'])
-  check.save()
-  Inventory.objects.get(Name=Name).delete()
-  objs=Inventory.objects.all()
-  objs1=deleted.objects.all()
-  return render(request,'undelete.html',{'obj':objs,'obj1':objs1})
+  try:
+    p=Inventory.objects.get(Name=Name) 
+    check=deleted(Name=p.Name,Quantity=p.Quantity,Comment=request.GET['Comment'])
+    check.save()
+    Inventory.objects.get(Name=Name).delete()
+    objs=Inventory.objects.all()
+    objs1=deleted.objects.all()
+    return render(request,'undelete.html',{'obj':objs,'obj1':objs1})
+  except:
+    return render(request,'delete1.html')
+
 def undelete(request):
   objs1=deleted.objects.all().last()
   #print(objs1)
@@ -64,5 +69,6 @@ def edit(request):
    #     form = Inventory(request.GET, instance=inv)
     #    form.save()
   objs=Inventory.objects.all()
-  return render(request,'display.html',{'obj':objs})
+  objs1=deleted.objects.all()
+  return render(request,'display.html',{'obj':objs,'obj1':objs1})
     

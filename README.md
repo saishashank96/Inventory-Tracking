@@ -20,3 +20,22 @@ You could also install packages by using the Replit packager interface in the le
 ## Help
 
 If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support).
+
+##Functionality covered:
+
+1. Create inventory items
+2. Edit Them
+3. Delete Them
+4. View a list of them
+5. When deleting, allow deletion comments and undeletion
+
+
+There are two fields to store information regarding the our inventory i.e Name and Quantity.
+
+If the item exists the application will ask to update the quantity rather adding the same item. its case sensitive.
+
+
+
+
+
+
