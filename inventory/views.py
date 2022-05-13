@@ -15,7 +15,7 @@ def insertv(request):
     return HttpResponse(a)
 
 def insert(request):
- # Inventory.objects.all().delete()
+
   Name=request.GET['Name']
   if request.method=='GET':
     try:
@@ -58,17 +58,22 @@ def undelete(request):
 def editv(request):
   return render(request,'edit.html')
 def edit(request):
-  Name=request.GET['Name']
-  Quantity=request.GET['Quantity']
-  inv=Inventory.objects.get(Name=Name)
-  print(inv)
-  inv.Name=Name
-  inv.Quantity=Quantity
-  inv.save()
+  try:
+    Name=request.GET['Name']
+    Quantity=request.GET['Quantity']
+    inv=Inventory.objects.get(Name=Name)
+    print(inv)
+    inv.Name=Name
+    inv.Quantity=Quantity
+    inv.save()
+    return view(request)
+  except:
+     return render(request,'editv1.html')
   #if request.method == 'GET':
    #     form = Inventory(request.GET, instance=inv)
     #    form.save()
-  objs=Inventory.objects.all()
-  objs1=deleted.objects.all()
-  return render(request,'display.html',{'obj':objs,'obj1':objs1})
-    
+
+def deleteentiredatabase(request):
+  Inventory.objects.all().delete()
+  deleted.objects.all().delete()
+  return view(request)

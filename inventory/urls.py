@@ -11,5 +11,7 @@ urlpatterns = [
     path('delete',views.delete,name='delete'),
     path('editv',views.editv,name='editv'),
     path('edit',views.edit,name='edit'),
-    path('undelete',views.undelete,name='undelete'),
+    path('undelete',views.undelete,name='undelete'), 
+    path('deleteentiredatabase',views.deleteentiredatabase,name='deleteentiredatabase'),  
+  
 ]

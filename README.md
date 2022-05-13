@@ -29,11 +29,33 @@ If you need help you might be able to find an answer on our [docs](https://docs.
 4. View a list of them
 5. When deleting, allow deletion comments and undeletion
 
-
-There are two fields to store information regarding the our inventory i.e Name and Quantity.
-
+Create:
 If the item exists the application will ask to update the quantity rather adding the same item. its case sensitive.
 
+If the element does not exists it would go ahead and add to the database.
+
+Edit:
+If the element is present in the system it would edit the quantity of the element.
+
+If the element does not exists the system will take you back to edit option.
+
+
+Delete:
+If the element exists it would delete the element and you can add comment you can check that in deleted item table.
+
+after deleting it would ask whether you want to undelete the transaction.
+if you click on undelete it would undelete the item.
+
+
+If the element does not exist it would ask to check the view and delete correct element.
+
+
+View:
+There are two fields to store information regarding the our inventory i.e Name and Quantity.
+
+Delete Entire Database: it would wipe the entire data.
+
+Note: The system is case sensitive.
 
 
 
