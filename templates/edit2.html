@@ -1,0 +1,23 @@
+</head>
+    <body>
+    <h3>The item exists please edit the quantity using edit</h3>
+    <div class="login-box">
+        <h1>Delete Inventory</h1>
+            <form method="GET" action="{% url 'edit' %}">    
+            
+            <p>Name</p>
+            <input type="text" name="Name" placeholder="Enter Name">
+            <p>Quantity</p>
+            <input type="text" name="Quantity" placeholder="Enter Quantity">
+
+
+        
+           <br>
+            <input type="submit" name="submit">
+
+        
+        <br>
+            </form>
+        </div>    
+    </body>
+</html>

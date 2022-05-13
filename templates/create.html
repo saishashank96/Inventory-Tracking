@@ -1,9 +1,17 @@
-</head>
-    <body>
-    <div class="login-box">
-    <a href="{% url 'insertv'% }">
-      check
-    </a>
-        </div>    
-    </body>
-</html>
+{% load static %}
+
+
+
+
+<div>
+      <a  href="{% url 'insertv' %}">Create Inventory items</a>
+  <br>
+      <a  href="{% url 'view' %}">View Inventory items</a>
+  <br>
+       <a  href="{% url 'deletev' %}">Delete Inventory items</a>
+  <br>
+       <a  href="{% url 'editv' %}">Edit Inventory items</a>
+    </div>
+
+
+

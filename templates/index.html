@@ -2,8 +2,8 @@
     <body>
     <div class="login-box">
         <h1>Inventory</h1>
-            <form method="POST" action="{% url 'main' %}">    
-            {% csrf_token %}
+            <form method="GET" action="{% url 'insert' %}">    
+            
             <p>Name</p>
             <input type="text" name="Name" placeholder="Enter Name" required="">
             <p>Quantity</p>

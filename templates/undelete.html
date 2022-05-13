@@ -1,0 +1,34 @@
+<a  href="{% url 'main' %}">HOME</a>
+<a href="{%url 'undelete' %}">Undelete Previous</a>>
+
+<table>
+  <th>Inventory Items</th>
+    <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+    </tr>
+    {% for item in obj %}
+    <tr> 
+        <td>{{ item.Name }}</td>
+        ...
+        <td>{{ item.Quantity }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<table>
+  <th>Deleted Items</th>
+    <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Comment</th>>
+    </tr>
+    {% for item in obj1 %}
+    <tr> 
+        <td>{{ item.Name }}</td>
+        ...
+        <td>{{ item.Quantity }}</td>
+        ...
+        <td>{{item.Comment}}</td>
+    </tr>
+    {% endfor %}
+</table>
